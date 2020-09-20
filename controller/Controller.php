@@ -33,4 +33,9 @@ class Controller {
         include_once 'view/error404.php';
     }
 
+    public static function InsertComment($c, $id) {
+        Comments::InsertComment($c, $id);
+        self::NewsByID($id);
+    }
+
 }
