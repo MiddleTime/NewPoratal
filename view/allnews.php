@@ -8,5 +8,4 @@ ob_start();
 ViewNews::AllNews($arr);
 $content = ob_get_clean();
 include_once 'view/layout.php';
-
 ?>
