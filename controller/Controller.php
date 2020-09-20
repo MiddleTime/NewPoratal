@@ -38,4 +38,19 @@ class Controller {
         self::NewsByID($id);
     }
 
+    public static function Comments($newsid) {
+        $arr = Comments::getCommentByNewsID($newsid);
+        ViewComments::CommentsByNews($arr);
+    }
+
+    public static function CommentsCount($newsid) {
+        $arr = Comments::getCommentsCountByNewsID($newsid);
+        ViewComments::CommentsCount($arr);
+    }
+
+    public static function CommentsCountWithAncor($newsid) {
+        $arr = Comments::getCommentsCountByNewsID($newsid);
+        ViewComments::CommentsCountWithAncor($arr);
+    }
+
 }

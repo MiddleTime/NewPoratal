@@ -7,8 +7,8 @@ ob_start();
 <?php
 ViewNews::ReadNews($n);
 
-//echo "<br>";
-//Controller::Comments($_GET['id']);
+echo "<br>";
+Controller::Comments($_GET['id']);
 
 echo "<br>";
 ViewComments::CommentsForm();
